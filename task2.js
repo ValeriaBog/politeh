@@ -60,3 +60,12 @@ const arr = numbers.sort((x, y) => x - y).slice(0, 2).reduce((x, y) => x + y);
 console.log(arr)
 }
 sumTwoSmallestNumbers([10, 343445353, 3453445, 3453545353453])
+
+//---------------------------------------------------------------------------//
+
+// Возьмите 2 строки s1и s2включите только буквы от aдо z. Возвращает новую отсортированную строку, максимально длинную, содержащую различные буквы (каждая из которых взята только один раз) из s1 или s2.
+
+function longest(s1, s2) {
+  return Array.from(new Set(s1 + s2)).sort().join('');
+}
+longest("xyaabbbccccdefww", "xxxxyyyyabklmopq")
